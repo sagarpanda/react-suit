@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": truen,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
+    "no-extra-parens": ["error"],
+    "no-template-curly-in-string": ["error"],
+    "valid-jsdoc": ["error"],
+    "dot-notation": ["error"],
+    "eqeqeq": ["error"],
+    "no-alert": ["error"],
+    "no-caller": ["error"],
+    "no-else-return": ["error"],
+    "no-empty-function": ["error"],
+    "no-eq-null": ["error"],
+    "no-eval": ["error"],
+    "no-floating-decimal": ["error"],
+    "no-implicit-coercion": ["error"],
+    "no-implied-eval": ["error"],
+    "no-loop-func": ["error"],
+    "no-multi-spaces": ["error"],
+    "no-multi-str": ["error"],
+    "no-new-wrappers": ["error"],
+    "no-param-reassign": ["error"],
+    "no-proto": ["error"],
+    "no-return-assign": ["error"],
+    "no-script-url": ["error"],
+    "no-void": ["error"],
+    "no-warning-comments": ["error"],
+    "no-with": ["error"],
+    "radix": ["error"]
+  },
+  "globals": {
+    "document": true,
+    "__dirname": true,
+    "module": true,
+    "test": true,
+    "expect": true
+  }
+}
