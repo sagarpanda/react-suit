@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sagarpanda/react-suit.git"
+    "url": "git+https://github.com/sagarpanda/react-ui-suit.git"
   },
   "author": "sagar panda",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sagarpanda/react-suit/issues"
+    "url": "https://github.com/sagarpanda/react-ui-suit/issues"
   },
-  "homepage": "https://github.com/sagarpanda/react-suit#readme",
+  "homepage": "https://github.com/sagarpanda/react-ui-suit#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
