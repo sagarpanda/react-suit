@@ -5,15 +5,15 @@ import styles from './Grid.scss';
 /**
 * General component description.
 */
-class Row extends Component {
+class Grid extends Component {
 
   render() {
     const { className, autoFitEnable, autoFit, height, ...extra } = this.props;
-    const styleClass = [styles.row, className];
+    const styleClass = [styles.grid, className];
     const style = extra.style || {}
     let extraProps = {...extra};
     if (autoFitEnable) {
-      styleClass.push('hflex');
+      styleClass.push('vflex');
       if (height) {
         extraProps = {...extra, style:{...style, height}}
       } else {
@@ -29,7 +29,7 @@ class Row extends Component {
 
 }
 
-Row.propTypes = {
+Grid.propTypes = {
   /**
   * Description of prop "foo".
   */
@@ -43,4 +43,4 @@ Row.propTypes = {
   height: PropTypes.number
 };
 
-export default Row;
+export default Grid;

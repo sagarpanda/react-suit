@@ -1,0 +1,63 @@
+@import 'configStyle.scss';
+
+.grid {
+  @include box-sizing;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  //margin-left: -10px;
+  //margin-right: -10px;
+}
+.row:global(::before) {
+  display: table;
+  content: " ";
+}
+.row:global(::after) {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.col {
+  @include box-sizing;
+  float: left;
+  padding-left: $colSpacing;
+}
+.col:global(:first-child) {
+  padding-left: 0;
+}
+
+$i: $gridCol;
+$widthPerCol: 100% / $gridCol;
+@while $i > 0 {
+  .col-md-#{$i} {
+    min-height: 1px;
+    position: relative;
+    width: $widthPerCol * $i;
+  }
+  $i: $i - 1;
+}
+
+.grid:global(.vflex), .row:global(.vflex), .col:global(.vflex) {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid:global(.hflex), .row:global(.hflex), .col:global(.hflex) {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid:global(.flex-1), .row:global(.flex-1), .col:global(.flex-1) {
+  flex: 1;
+}
+
+:global(.bg-color) {
+  background-color: #FCC;
+}
+:global(.bg-color2) {
+  background-color: #ECE;
+}

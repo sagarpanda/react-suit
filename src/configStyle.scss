@@ -1,0 +1,9 @@
+$gridCol: 24;
+$colSpacing: 10px;
+
+@mixin box-sizing {
+  box-sizing: border-box;
+}
+/*:global(*), :global(::after), :global(::before) {
+    box-sizing: border-box;
+}*/
