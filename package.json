@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/sagarpanda/react-ui-suit.git"
   },
-  "author": "sagar panda",
+  "author": "Sagar Panda<er.sagarpanda@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sagarpanda/react-ui-suit/issues"
@@ -26,19 +26,25 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.8.2",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.0.0",
+    "node-sass": "^4.9.0",
     "react-docgen": "^2.20.1",
     "react-test-renderer": "^16.4.0",
-    "webpack": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"

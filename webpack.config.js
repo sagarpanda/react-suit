@@ -29,6 +29,20 @@ var config = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader",
+          options: {
+            modules: true,
+            sourceMap: true
+          }
+        }, {
+          loader: "sass-loader"
+        }]
       }
     ]
   },
@@ -41,6 +55,7 @@ var config = {
   plugins: [
     htmlPublish()
   ],
+  devtool: 'source-map',
   devServer: { inline: true, port: 3000 }
 };
 
