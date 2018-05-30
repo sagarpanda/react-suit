@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "6"
+script:
+  - git checkout master
+  - npm run lint
+  - npm run test
+  - npm run build
+deploy:
+  provider: npm
+  email: $EMAIL_ADDRESS
+  api_key: $NPM_TOKEN
+  on:
+    branch: master
