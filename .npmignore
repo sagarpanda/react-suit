@@ -1,0 +1,8 @@
+example
+src
+.babelrc
+.eslintrc
+.npmignore
+.travis.yml
+index-build.html
+webpack.config.js
