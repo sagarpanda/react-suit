@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import styles from './Grid.scss';
+import styles from './Grid.css';
 /**
 * General component description.
 */

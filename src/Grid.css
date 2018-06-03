@@ -1,0 +1,75 @@
+.grid {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  //margin-left: -10px;
+  //margin-right: -10px;
+}
+.row:global(::before) {
+  display: table;
+  content: " ";
+}
+.row:global(::after) {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.col {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 10px;
+}
+.col:global(:first-child) {
+  padding-left: 0;
+}
+
+.col-md-1  { min-height:1px; position:relative; width:calc((100%/24) * 1); }
+.col-md-2  { min-height:1px; position:relative; width:calc((100%/24) * 2); }
+.col-md-3  { min-height:1px; position:relative; width:calc((100%/24) * 3); }
+.col-md-4  { min-height:1px; position:relative; width:calc((100%/24) * 4); }
+.col-md-5  { min-height:1px; position:relative; width:calc((100%/24) * 5); }
+.col-md-6  { min-height:1px; position:relative; width:calc((100%/24) * 6); }
+.col-md-7  { min-height:1px; position:relative; width:calc((100%/24) * 7); }
+.col-md-8  { min-height:1px; position:relative; width:calc((100%/24) * 8); }
+.col-md-9  { min-height:1px; position:relative; width:calc((100%/24) * 9); }
+.col-md-10 { min-height:1px; position:relative; width:calc((100%/24) * 10); }
+.col-md-11 { min-height:1px; position:relative; width:calc((100%/24) * 11); }
+.col-md-12 { min-height:1px; position:relative; width:calc((100%/24) * 12); }
+.col-md-13 { min-height:1px; position:relative; width:calc((100%/24) * 13); }
+.col-md-14 { min-height:1px; position:relative; width:calc((100%/24) * 14); }
+.col-md-15 { min-height:1px; position:relative; width:calc((100%/24) * 15); }
+.col-md-16 { min-height:1px; position:relative; width:calc((100%/24) * 16); }
+.col-md-17 { min-height:1px; position:relative; width:calc((100%/24) * 17); }
+.col-md-18 { min-height:1px; position:relative; width:calc((100%/24) * 18); }
+.col-md-19 { min-height:1px; position:relative; width:calc((100%/24) * 19); }
+.col-md-20 { min-height:1px; position:relative; width:calc((100%/24) * 20); }
+.col-md-21 { min-height:1px; position:relative; width:calc((100%/24) * 21); }
+.col-md-22 { min-height:1px; position:relative; width:calc((100%/24) * 22); }
+.col-md-23 { min-height:1px; position:relative; width:calc((100%/24) * 23); }
+.col-md-24 { min-height:1px; position:relative; width:calc((100%/24) * 24); }
+
+.grid:global(.vflex), .row:global(.vflex), .col:global(.vflex) {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid:global(.hflex), .row:global(.hflex), .col:global(.hflex) {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid:global(.flex-1), .row:global(.flex-1), .col:global(.flex-1) {
+  flex: 1;
+}
+
+:global(.bg-color) {
+  background-color: #FCC;
+}
+:global(.bg-color2) {
+  background-color: #ECE;
+}

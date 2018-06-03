@@ -31,7 +31,7 @@ var config = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [{
           loader: "style-loader"
         }, {
@@ -40,8 +40,6 @@ var config = {
             modules: true,
             sourceMap: true
           }
-        }, {
-          loader: "sass-loader"
         }]
       }
     ]
