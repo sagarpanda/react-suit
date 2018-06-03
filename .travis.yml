@@ -3,15 +3,9 @@ node_js:
   - "6"
 script:
   - npm run lint
-  - npm test
   - npm run build
-#before_deploy:
+before_deploy:
   - npm version patch
-  - git config user.email ${GIT_EMAIL}
-  - git config user.name ${GIT_USERID}
-  - git add package.json
-  - git commit -m "Updated version"
-  - git push "https://${GIT_TOKEN}@github.com/sagarpanda/react-ui-suit.git" master > /dev/null 2>&1
 deploy:
   provider: npm
   skip_cleanup: true
@@ -19,3 +13,9 @@ deploy:
   api_key: $NPM_TOKEN
   on:
     branch: master
+after_success:
+- git config user.email ${GIT_EMAIL}
+- git config user.name ${GIT_USERID}
+- git add package.json
+- git commit -m "Updated version"
+- git push "https://${GIT_TOKEN}@github.com/${GIT_USERID}/react-ui-suit.git" master
