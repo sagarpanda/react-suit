@@ -6,6 +6,11 @@ script:
   - npm run build
 before_deploy:
   - npm version patch
+  - git config user.email ${GIT_EMAIL}
+  - git config user.name ${GIT_USERID}
+  - git add package.json
+  - git commit -m "Updated version"
+  - git push "https://${GIT_TOKEN}@github.com/${GIT_USERID}/react-ui-suit.git" master
 deploy:
   provider: npm
   skip_cleanup: true
@@ -13,9 +18,3 @@ deploy:
   api_key: $NPM_TOKEN
   on:
     branch: master
-after_deploy:
-  - git config user.email ${GIT_EMAIL}
-  - git config user.name ${GIT_USERID}
-  - git add package.json
-  - git commit -m "Updated version"
-  - git push "https://${GIT_TOKEN}@github.com/${GIT_USERID}/react-ui-suit.git" master
